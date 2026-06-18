@@ -18,7 +18,7 @@ document.getElementById("year").textContent = new Date().getFullYear();
 
 document.getElementById("contact-form").addEventListener("submit", (event) => {
   event.preventDefault();
-  document.getElementById("form-status").textContent = "Thanks! Your message has been recorded.";
+  document.getElementById("form-status").textContent = "Thanks! Form submitted successfully (demo mode).";
   event.target.reset();
 });
 

@@ -15,4 +15,4 @@ Professional personal portfolio website for **K. Mahender Reddy** (Aspiring Data
 
 ## Run locally
 
-Open `/home/runner/work/MyPortfolio/MyPortfolio/index.html` directly in a browser, or serve the folder with any static server.
+Open `index.html` directly in a browser from the project folder, or serve the folder with any static server.
