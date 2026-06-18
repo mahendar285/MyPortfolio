@@ -16,3 +16,6 @@ Professional personal portfolio website for **K. Mahender Reddy** (Aspiring Data
 ## Run locally
 
 Open `index.html` directly in a browser from the project folder, or serve the folder with any static server.
+
+
+> Note: `assets/K_Mahender_Reddy_Resume.pdf` is a placeholder file and should be replaced with the latest final resume PDF.

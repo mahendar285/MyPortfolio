@@ -38,7 +38,6 @@ body {
   padding: 1rem 5vw;
   backdrop-filter: blur(8px);
   background: var(--bg);
-  background: color-mix(in srgb, var(--bg) 86%, transparent);
   border-bottom: 1px solid var(--card-border);
 }
 
@@ -176,7 +175,6 @@ h1 { font-size: clamp(2rem, 5vw, 3.4rem); margin: 0 0 .75rem; }
   border-radius: .55rem;
   padding: .65rem;
   background: var(--surface);
-  background: color-mix(in srgb, var(--surface) 94%, transparent);
   color: var(--text);
 }
 

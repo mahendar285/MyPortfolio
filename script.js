@@ -2,25 +2,36 @@ const body = document.body;
 const toggle = document.getElementById("theme-toggle");
 const storedTheme = localStorage.getItem("theme");
 
-if (storedTheme === "dark") {
+if (toggle && storedTheme === "dark") {
   body.classList.add("dark");
   toggle.textContent = "☀️";
 }
 
-toggle.addEventListener("click", () => {
-  body.classList.toggle("dark");
-  const darkMode = body.classList.contains("dark");
-  toggle.textContent = darkMode ? "☀️" : "🌙";
-  localStorage.setItem("theme", darkMode ? "dark" : "light");
-});
+if (toggle) {
+  toggle.addEventListener("click", () => {
+    body.classList.toggle("dark");
+    const darkMode = body.classList.contains("dark");
+    toggle.textContent = darkMode ? "☀️" : "🌙";
+    localStorage.setItem("theme", darkMode ? "dark" : "light");
+  });
+}
 
-document.getElementById("year").textContent = new Date().getFullYear();
+const yearElement = document.getElementById("year");
+if (yearElement) {
+  yearElement.textContent = new Date().getFullYear();
+}
 
-document.getElementById("contact-form").addEventListener("submit", (event) => {
-  event.preventDefault();
-  document.getElementById("form-status").textContent = "Thanks! Form submitted successfully (demo mode).";
-  event.target.reset();
-});
+const contactForm = document.getElementById("contact-form");
+if (contactForm) {
+  contactForm.addEventListener("submit", (event) => {
+    event.preventDefault();
+    const formStatus = document.getElementById("form-status");
+    if (formStatus) {
+      formStatus.textContent = "Thanks! Form submitted successfully (demo mode).";
+    }
+    event.target.reset();
+  });
+}
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
