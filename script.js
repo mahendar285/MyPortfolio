@@ -9,6 +9,10 @@ if (toggle) {
   } else if (storedTheme === "light") {
     body.classList.remove("dark");
     toggle.textContent = "🌙";
+  } else {
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+    body.classList.toggle("dark", prefersDark);
+    toggle.textContent = prefersDark ? "☀️" : "🌙";
   }
 }
 

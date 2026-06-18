@@ -4,6 +4,8 @@
   --text: #111827;
   --muted: #4b5563;
   --accent: #2563eb;
+  --accent-strong: #1d4ed8;
+  --accent-rgb: 37, 99, 235;
   --card-border: rgba(37, 99, 235, 0.2);
   --shadow: 0 15px 45px rgba(17, 24, 39, 0.12);
 }
@@ -14,6 +16,8 @@ body.dark {
   --text: #e5e7eb;
   --muted: #9ca3af;
   --accent: #60a5fa;
+  --accent-strong: #3b82f6;
+  --accent-rgb: 96, 165, 250;
   --card-border: rgba(96, 165, 250, 0.35);
   --shadow: 0 15px 45px rgba(0, 0, 0, 0.45);
 }
@@ -23,7 +27,7 @@ html { scroll-behavior: smooth; }
 body {
   margin: 0;
   font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
-  background: radial-gradient(circle at top right, rgba(37, 99, 235, 0.08), transparent 35%), var(--bg);
+  background: radial-gradient(circle at top right, rgba(var(--accent-rgb), 0.08), transparent 35%), var(--bg);
   color: var(--text);
 }
 
@@ -153,7 +157,7 @@ h1 { font-size: clamp(2rem, 5vw, 3.4rem); margin: 0 0 .75rem; }
   border: 0;
   font-weight: 700;
   text-decoration: none;
-  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  background: linear-gradient(135deg, var(--accent), var(--accent-strong));
   color: #fff;
   cursor: pointer;
 }
