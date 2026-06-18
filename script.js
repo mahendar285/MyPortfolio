@@ -2,9 +2,14 @@ const body = document.body;
 const toggle = document.getElementById("theme-toggle");
 const storedTheme = localStorage.getItem("theme");
 
-if (toggle && storedTheme === "dark") {
-  body.classList.add("dark");
-  toggle.textContent = "☀️";
+if (toggle) {
+  if (storedTheme === "dark") {
+    body.classList.add("dark");
+    toggle.textContent = "☀️";
+  } else if (storedTheme === "light") {
+    body.classList.remove("dark");
+    toggle.textContent = "🌙";
+  }
 }
 
 if (toggle) {

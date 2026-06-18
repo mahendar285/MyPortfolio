@@ -22,7 +22,7 @@ body.dark {
 html { scroll-behavior: smooth; }
 body {
   margin: 0;
-  font-family: Inter, Segoe UI, Roboto, Arial, sans-serif;
+  font-family: Inter, "Segoe UI", Roboto, Arial, sans-serif;
   background: radial-gradient(circle at top right, rgba(37, 99, 235, 0.08), transparent 35%), var(--bg);
   color: var(--text);
 }
@@ -201,7 +201,7 @@ h1 { font-size: clamp(2rem, 5vw, 3.4rem); margin: 0 0 .75rem; }
   transform: translateY(0);
 }
 
-@media (max-width: 860px) {
+@media (max-width: 768px) {
   .hero { grid-template-columns: 1fr; min-height: auto; }
   .topbar { align-items: start; }
 }
