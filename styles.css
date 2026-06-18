@@ -40,6 +40,7 @@ body {
   justify-content: space-between;
   gap: 1rem;
   padding: 1rem 5vw;
+  -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
   background: var(--bg);
   border-bottom: 1px solid var(--card-border);
